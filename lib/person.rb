@@ -1,3 +1,19 @@
+# class Person
+#   def initialize(attributes)
+#     attributes.each do |key, value|
+#       # create a getter and setter by calling the attr_accessor method
+#       self.class.attr_accessor(key)
+#       self.send("#{key}=", value)
+#     end
+#   end
+# end
+
 class Person
-  # your code here
+  def initialize(attributes)
+    attributes.each do |key,value|
+      self.class.attr_accessor(key)
+      self.send("#{key}=", value)
+    end
+  end
+
 end
